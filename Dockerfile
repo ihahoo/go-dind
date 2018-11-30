@@ -1,3 +1,3 @@
-FROM golang:1.9.2-alpine3.6
+FROM golang:1.11.2-alpine3.8
 
 RUN apk add --update docker py-pip && pip install docker-compose
