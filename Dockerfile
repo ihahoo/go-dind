@@ -1,3 +1,4 @@
-FROM golang:1.11.2-alpine3.8
+FROM golang:1.17.7-alpine3.15
 
-RUN apk add --update docker py-pip openssh-client make && pip install docker-compose
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories \
+    && apk add --update docker openssh-client make
